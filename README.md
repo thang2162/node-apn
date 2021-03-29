@@ -38,7 +38,7 @@ node-apn
 [npm][] is the preferred installation method:
 
 ```bash
-$ npm install apn --save
+$ npm install @thang2162/apn --save
 ```
 
 ## Quick Start
@@ -50,7 +50,7 @@ If you have previously used v1.x and wish to learn more about what's changed in 
 ### Load in the module
 
 ```javascript
-var apn = require('apn');
+var apn = require('@thang2162/apn');
 ```
 
 ### Connecting
@@ -132,7 +132,7 @@ This will result in the the following notification payload being sent to the dev
 {"messageFrom":"John Appleseed","aps":{"badge":3,"sound":"ping.aiff","alert":"\uD83D\uDCE7 \u2709 You have a new message"}}
 ```
 
-You should only create one `Provider` per-process for each certificate/key pair you have. You do not need to create a new `Provider` for each notification. If you are only sending notifications to one app then there is no need for more than one `Provider`. 
+You should only create one `Provider` per-process for each certificate/key pair you have. You do not need to create a new `Provider` for each notification. If you are only sending notifications to one app then there is no need for more than one `Provider`.
 
 If you are constantly creating `Provider` instances in your app, make sure to call `Provider.shutdown()` when you are done with each provider to release its resources and memory.
 
@@ -197,4 +197,3 @@ Released under the MIT License
 [mgcrea]: https://github.com/mgcrea
 [porsager]: https://github.com/porsager
 [chockenberry]: https://github.com/chockenberry
-
